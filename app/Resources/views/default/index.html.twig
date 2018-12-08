@@ -1,76 +1,976 @@
-{% extends 'base.html.twig' %}
+{% extends 'default/components/header.html.twig' %}
 
 {% block body %}
-    <div id="wrapper">
-        <div id="container">
-            <div id="welcome">
-                <h1><span>Welcome to</span> Symfony {{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION') }}</h1>
-            </div>
-
-            <div id="status">
-                <p>
-                    <svg id="icon-status" width="1792" height="1792" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1671 566q0 40-28 68l-724 724-136 136q-28 28-68 28t-68-28l-136-136-362-362q-28-28-28-68t28-68l136-136q28-28 68-28t68 28l294 295 656-657q28-28 68-28t68 28l136 136q28 28 28 68z" fill="#759E1A"/></svg>
-
-                    Your application is now ready. You can start working on it at:
-                    <code>{{ base_dir }}</code>
-                </p>
-            </div>
-
-            <div id="next">
-                <h2>What's next?</h2>
-                <p>
-                    <svg id="icon-book" version="1.1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="-12.5 9 64 64" enable-background="new -12.5 9 64 64" xml:space="preserve">
-                        <path fill="#AAA" d="M6.8,40.8c2.4,0.8,4.5-0.7,4.9-2.5c0.2-1.2-0.3-2.1-1.3-3.2l-0.8-0.8c-0.4-0.5-0.6-1.3-0.2-1.9
-                            c0.4-0.5,0.9-0.8,1.8-0.5c1.3,0.4,1.9,1.3,2.9,2.2c-0.4,1.4-0.7,2.9-0.9,4.2l-0.2,1c-0.7,4-1.3,6.2-2.7,7.5
-                            c-0.3,0.3-0.7,0.5-1.3,0.6c-0.3,0-0.4-0.3-0.4-0.3c0-0.3,0.2-0.3,0.3-0.4c0.2-0.1,0.5-0.3,0.4-0.8c0-0.7-0.6-1.3-1.3-1.3
-                            c-0.6,0-1.4,0.6-1.4,1.7s1,1.9,2.4,1.8c0.8,0,2.5-0.3,4.2-2.5c2-2.5,2.5-5.4,2.9-7.4l0.5-2.8c0.3,0,0.5,0.1,0.8,0.1
-                            c2.4,0.1,3.7-1.3,3.7-2.3c0-0.6-0.3-1.2-0.9-1.2c-0.4,0-0.8,0.3-1,0.8c-0.1,0.6,0.8,1.1,0.1,1.5c-0.5,0.3-1.4,0.6-2.7,0.4l0.3-1.3
-                            c0.5-2.6,1-5.7,3.2-5.8c0.2,0,0.8,0,0.8,0.4c0,0.2,0,0.2-0.2,0.5c-0.2,0.3-0.3,0.4-0.2,0.7c0,0.7,0.5,1.1,1.2,1.1
-                            c0.9,0,1.2-1,1.2-1.4c0-1.2-1.2-1.8-2.6-1.8c-1.5,0.1-2.8,0.9-3.7,2.1c-1.1,1.3-1.8,2.9-2.3,4.5c-0.9-0.8-1.6-1.8-3.1-2.3
-                            c-1.1-0.7-2.3-0.5-3.4,0.3c-0.5,0.4-0.8,1-1,1.6c-0.4,1.5,0.4,2.9,0.8,3.4l0.9,1c0.2,0.2,0.6,0.8,0.4,1.5c-0.3,0.8-1.2,1.3-2.1,1
-                            c-0.4-0.2-1-0.5-0.9-0.9c0.1-0.2,0.2-0.3,0.3-0.5s0.1-0.3,0.1-0.3c0.2-0.6-0.1-1.4-0.7-1.6c-0.6-0.2-1.2,0-1.3,0.8
-                            C4.3,38.4,4.7,40,6.8,40.8z M46.1,20.9c0-4.2-3.2-7.5-7.1-7.5h-3.8C34.8,10.8,32.7,9,30.2,9L-2.3,9.1c-2.8,0.1-4.9,2.4-4.9,5.4
-                            L-7,58.6c0,4.8,8.1,13.9,11.6,14.1l34.7-0.1c3.9,0,7-3.4,7-7.6L46.1,20.9z M-0.3,36.4c0-8.6,6.5-15.6,14.5-15.6
-                            c8,0,14.5,7,14.5,15.6S22.1,52,14.2,52C6.1,52-0.3,45-0.3,36.4z M42.1,65.1c0,1.8-1.5,3.1-3.1,3.1H4.6c-0.7,0-3-1.8-4.5-4.4h30.4
-                            c2.8,0,5-2.4,5-5.4V17.9h3.7c1.6,0,2.9,1.4,2.9,3.1V65.1L42.1,65.1z"/>
-                    </svg>
-
-                    Read the documentation to learn
-                    <a href="https://symfony.com/doc/{{ constant('Symfony\\Component\\HttpKernel\\Kernel::VERSION')[:3] }}/page_creation.html">
-                        How to create your first page in Symfony
-                    </a>
-                </p>
-            </div>
-
+    <div class="content-top">
+        <div class="container">
+            <div class="row">
+                <div class="catgory-left">
+                    <div class="box category-left-box megnorcategory">
+                        <div class="box-content">
+                            <ul id="nav-one" class="dropmenu">
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=85">Yataq otağı</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=87">Qonaq otağı</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=98">Yumşaq mebel</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=88">Mətbəx mebeli</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=99">Masa və stullar</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=97">Məktəb mebelləri</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=100">Baxça mebeli</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=101">Ofis mebeli</a>
+                                <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=96">Digər mebellər</a>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slider">
+                    <div id="spinner"></div>
+                    <div id="slideshow0" class="owl-carousel" style="opacity: 1;">
+                        <div class="item">
+                            <img src="http://masalmebel.az/image/cache/catalog/banerler/2-3-678x478.jpg" alt="baner1" class="img-responsive" />
+      </div>
+                            <div class="item">
+                                <img src="http://masalmebel.az/image/cache/catalog/banerler/baner_01-678x478.jpg" alt="baner2" class="img-responsive" />
+      </div>
+                                <div class="item">
+                                    <img src="http://masalmebel.az/image/cache/catalog/banerler/baner_02-678x478.jpg" alt="baner3" class="img-responsive" />
+      </div>
+                                    <div class="item">
+                                        <img src="http://masalmebel.az/image/cache/catalog/banerler/baner_03-678x478.jpg" alt="baner4" class="img-responsive" />
+      </div>
+                                        <div class="item">
+                                            <img src="http://masalmebel.az/image/cache/catalog/banerler/2-3-678x478.jpg" alt="baner5" class="img-responsive" />
+      </div>
+                                            <div class="item">
+                                                <img src="http://masalmebel.az/image/cache/catalog/banerler/baner_04-678x478.jpg" alt="baner6" class="img-responsive" />
+      </div>
+                                                <div class="item">
+                                                    <img src="http://masalmebel.az/image/cache/catalog/banerler/baner_05-678x478.jpg" alt="baner7" class="img-responsive" />
+      </div>
+                                                </div>
+                                            </div>
+                                            <script type="text/javascript">
+                                            $('#slideshow0').owlCarousel({
+                                                items: 6,
+                                                autoPlay: 5000,
+                                                singleItem: true,
+                                                navigation: true,
+                                                navigationText: ['<i class="fa fa-chevron-left fa-5x"></i>', '<i class="fa fa-chevron-right fa-5x"></i>'],
+                                                pagination: true,
+                                                transitionStyle: "fade"
+                                            });
+                                            </script>
+                                            <script type="text/javascript">
+                                            // Can also be used with $(document).ready()
+                                            $(window).load(function() {
+                                                $("#spinner").fadeOut("slow");
+                                            });
+                                            </script>
+                                            <div class="subbanner-cms1">
+                                                <div class="subbanner1"><a href="#"><img src="image/catalog/sub1_new.jpg" alt="" class="img-responsive"></a></div>
+                                                <div class="subbanner2"><a href="#"><img src="image/catalog/sub2_new.jpg" alt="" class="img-responsive"></a></div>
+                                            </div>
+                                            <div class="servicetop-cms">
+                                                <div class="service">
+                                                    <div class="serviceblock1 serviceblock clearfix">
+                                                        <div class="title">
+                                                            <div class="title">Pulsuz çatdırılma</div>
+                                                            <div class="subtitle">300 azn və daha çox</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="serviceblock2 serviceblock clearfix">
+                                                        <div class="title">dəyişmək və zəmanət</div>
+                                                        <div class="subtitle">geri qaytarmaq İmkanı</div>
+                                                    </div>
+                                                    <div class="serviceblock3 serviceblock clearfix">
+                                                        <div class="title">Online dəstək</div>
+                                                        <div class="subtitle">+994 (12) 344 57 00<br></div>
+                                                    </div>
+                                                    <div class="serviceblock4 serviceblock clearfix">
+                                                        <div class="title">Qapıda ödəmə</div>
+                                                        <div class="subtitle">nağd və bank kartları İlə</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="container">
+                                    <div class="row home_row">
+                                        <aside id="column-left" class="col-sm-3 hidden-xs">
+                                            <div class="service-banner">
+                                                <div class="box-heading">Üstünlüklərimiz</div>
+                                                <div class="box-content">
+                                                    <div class="ser-banner banner1">
+                                                        <div class="round_img">
+                                                            <img src="/image/catalog/icon_5.png" alt=""></div>
+                                                            <div class="ser-text1">Büdcəyə Qənaət</div>
+                                                            <div class="ser-text3"></div>
+                                                        </div>
+                                                        <div class="ser-banner banner2">
+                                                            <div class="round_img">
+                                                                <img src="/image/catalog/icon_4.png" alt=""></div>
+                                                                <div class="ser-text1">Zəmanət</div>
+                                                                <div class="ser-text3"><br></div>
+                                                            </div>
+                                                            <div class="ser-banner banner3">
+                                                                <div class="round_img">
+                                                                    <img src="/image/catalog/icon_3.png" alt=""></div>
+                                                                    <div class="ser-text1">Online sifariş</div>
+                                                                    <div class="ser-text3"></div>
+                                                                </div>
+                                                                <div class="ser-banner banner4">
+                                                                    <div class="round_img">
+                                                                        <img src="/image/catalog/icon_2.png" alt=""></div>
+                                                                        <div class="ser-text1">Çatdırılma</div>
+                                                                        <div class="ser-text3"></div>
+                                                                    </div>
+                                                                    <div class="ser-banner banner5">
+                                                                        <div class="round_img">
+                                                                            <img src="/image/catalog/icon_1.png" alt=""></div>
+                                                                            <div class="ser-text1">Quraşdırılma</div>
+                                                                            <div class="ser-text3"></div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="box">
+                                                                    <div class="box-heading">Məlumat</div>
+                                                                    <div class="list-group">
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=7">Əlaqə</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=4">Haqqımızda</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=6">Çatdırılma</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=3">Məxfilik siyasəti</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=5">İstifadə şərtləri</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/contact">Əlaqə</a>
+                                                                        <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/sitemap">Sayt xəritəsi</a>
+                                                                    </div>
+                                                                </div>
+                                                                <div id="banner0" class="single-banner">
+                                                                    <div class="item">
+                                                                        <img src="http://masalmebel.az/image/cache/catalog/1x-270x290-270x290.jpg" alt="22" class="img-responsive" />
+      </div>
+                                                                    </div>
+                                                                    <script type="text/javascript">
+                                                                    <!--
+                                                                    $('.bannercarousel').owlCarousel({
+                                                                        items: 1,
+                                                                        autoPlay: 3000,
+                                                                        singleItem: true,
+                                                                        navigation: false,
+                                                                        pagination: true,
+                                                                        transitionStyle: 'fade'
+                                                                    });
+                                                                    -->
+                                                                    </script>
+                                                                    <div class="box special">
+                                                                        <div class="box-heading">Xüsusi təkliflər</div>
+                                                                        <div class="box-content">
+                                                                            <div class="box-product productbox-grid" id="special-grid">
+                                                                                <div class="product-items">
+                                                                                    <div class="product-block product-thumb transition">
+                                                                                        <div class="product-block-inner">
+                                                                                            <div class="image">
+                                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=221">
+        <img src="http://masalmebel.az/image/cache/catalog/Masa_stullar/masa_stul025-cr-76x100.jpg" title="Masa və stullar" alt="Masa və stullar" class="img-responsive"/></a>
+                                                                                                <span class="saleicon sale">Sale</span>
+                                                                                                <div class="button-group">
+                                                                                                    <button type="button" class="addtocart" onclick="cart.add('221');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                                    <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('221');"><i class="fa fa-heart"></i></button>
+                                                                                                    <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('221');"><i class="fa fa-exchange"></i></button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="product-details">
+                                                                                                <div class="caption">
+                                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=221">Masa və stullar</a></h4>
+                                                                                                    <p class="price">
+                                                                                                        <span class="price-new">360 <span class="manat">M</span></span> <span class="price-old">460 <span class="manat">M</span></span>
+                                                                                                    </p>
+                                                                                                    <div class="rating">
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                    </div>
+                                                                                                    <div class="button-group">
+                                                                                                        <button type="button" class="addtocart" onclick="cart.add('221');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('221');"><i class="fa fa-heart"></i></button>
+                                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('221');"><i class="fa fa-exchange"></i></button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="product-items">
+                                                                                    <div class="product-block product-thumb transition">
+                                                                                        <div class="product-block-inner">
+                                                                                            <div class="image">
+                                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=76">
+        <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_113-cr-76x100.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                                                <span class="saleicon sale">Sale</span>
+                                                                                                <div class="button-group">
+                                                                                                    <button type="button" class="addtocart" onclick="cart.add('76');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                                    <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('76');"><i class="fa fa-heart"></i></button>
+                                                                                                    <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('76');"><i class="fa fa-exchange"></i></button>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                            <div class="product-details">
+                                                                                                <div class="caption">
+                                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=76">TV bölmələri</a></h4>
+                                                                                                    <p class="price">
+                                                                                                        <span class="price-new">250 <span class="manat">M</span></span> <span class="price-old">350 <span class="manat">M</span></span>
+                                                                                                    </p>
+                                                                                                    <div class="rating">
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                                    </div>
+                                                                                                    <div class="button-group">
+                                                                                                        <button type="button" class="addtocart" onclick="cart.add('76');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('76');"><i class="fa fa-heart"></i></button>
+                                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('76');"><i class="fa fa-exchange"></i></button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="special_default_width" style="display:none; visibility:hidden"></span>
+                                                                    <div id="banner1" class="single-banner">
+                                                                        <div class="item">
+                                                                            <img src="http://masalmebel.az/image/cache/catalog/2211-270x400.jpg" alt="baner" class="img-responsive" />
+      </div>
+                                                                        </div>
+                                                                        <script type="text/javascript">
+                                                                        <!--
+                                                                        $('.bannercarousel').owlCarousel({
+                                                                            items: 1,
+                                                                            autoPlay: 3000,
+                                                                            singleItem: true,
+                                                                            navigation: false,
+                                                                            pagination: true,
+                                                                            transitionStyle: 'fade'
+                                                                        });
+                                                                        -->
+                                                                        </script>
+                                        </aside>
+                                        <div id="content" class="col-sm-9">
+                                            <div class="hometab box">
+                                                <div class="tab-head">
+                                                    <div class="hometab-heading box-heading">Bölmələr</div>
+                                                    <div id="tabs" class="htabs">
+                                                        <ul class='etabs'>
+                                                            <li class='tab'>
+                                                                <a href="#tab-latest">Yeni gələnlər</a>
+                                                            </li>
+                                                            <li class='tab'>
+                                                                <a href="#tab-special">Endirimlər</a>
+                                                            </li>
+                                                            <li class='tab'>
+                                                                <a href="#tab-bestseller">Ən çox satılanlar</a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                                <div id="tab-latest" class="tab-content">
+                                                    <div class="box">
+                                                        <div class="box-content">
+                                                            <div class="customNavigation">
+                                                                <a class="fa prev"></a>
+                                                                <a class="fa next"></a>
+                                                            </div>
+                                                            <div class="box-product product-carousel" id="tablatest-carousel">
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=422">
+                    <img src="http://masalmebel.az/image/cache/catalog/belarusiya_yeni/Prestij 2-cr-900x900.jpg" title="Prestij2" alt="Prestij2" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=422">Prestij2</a></h4>
+                                                                                    <p class="price">
+                                                                                        5850 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('422');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('422');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('422');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=422"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=421">
+                    <img src="http://masalmebel.az/image/cache/catalog/belarusiya_yeni/ameliya2_ID389(2)-cr-900x900.jpg" title="Ameliya  " alt="Ameliya  " class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=421">Ameliya  </a></h4>
+                                                                                    <p class="price">
+                                                                                        2700 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('421');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('421');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('421');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=421"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=420">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq031-cr-900x900.jpg" title="Divan ''Amerikanka''" alt="Divan ''Amerikanka''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=420">Divan ''Amerikanka''</a></h4>
+                                                                                    <p class="price">
+                                                                                        400 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('420');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('420');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('420');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=420"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=419">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq030-cr-900x900.jpg" title="Divan künc ''Komfort''" alt="Divan künc ''Komfort''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=419">Divan künc ''Komfort''</a></h4>
+                                                                                    <p class="price">
+                                                                                        550 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('419');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('419');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('419');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=419"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=418">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq029-cr-900x900.jpg" title="Divan künc ''Melodi''" alt="Divan künc ''Melodi''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=418">Divan künc ''Melodi''</a></h4>
+                                                                                    <p class="price">
+                                                                                        1560 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('418');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('418');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('418');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=418"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=417">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq028-cr-900x900.jpg" title="Divan künc ''Milano''" alt="Divan künc ''Milano''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=417">Divan künc ''Milano''</a></h4>
+                                                                                    <p class="price">
+                                                                                        1550 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('417');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('417');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('417');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=417"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=416">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq027-cr-900x900.jpg" title="Divan künc ''Omeqa''" alt="Divan künc ''Omeqa''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=416">Divan künc ''Omeqa''</a></h4>
+                                                                                    <p class="price">
+                                                                                        1100 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('416');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('416');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('416');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=416"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=415">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq026-cr-900x900.jpg" title="Divan künc ''Röyal''" alt="Divan künc ''Röyal''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=415">Divan künc ''Röyal''</a></h4>
+                                                                                    <p class="price">
+                                                                                        1600 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('415');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('415');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('415');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=415"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="tablatest_default_width" style="display:none; visibility:hidden"></span>
+                                                </div>
+                                                <div id="tab-bestseller" class="tab-content">
+                                                    <div class="box">
+                                                        <div class="box-content">
+                                                            <div class="box-product productbox-grid" id="tabbestseller-grid">
+                                                                <div class="product-items">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=418">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq029-cr-900x900.jpg" title="Divan künc ''Melodi''" alt="Divan künc ''Melodi''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=418">Divan künc ''Melodi''</a></h4>
+                                                                                    <p class="price">
+                                                                                        1560 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('418');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('418');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('418');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=418"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-items">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=384">
+                    <img src="http://masalmebel.az/image/cache/catalog/yatag_otagi/yataq032-cr-900x900.jpg" title="İstambul" alt="İstambul" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=384">İstambul</a></h4>
+                                                                                    <p class="price">
+                                                                                        1875 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('384');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('384');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('384');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=384"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-items">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=420">
+                    <img src="http://masalmebel.az/image/cache/catalog/yumushaq_mebeller/yumusaq031-cr-900x900.jpg" title="Divan ''Amerikanka''" alt="Divan ''Amerikanka''" class="img-responsive"/></a>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=420">Divan ''Amerikanka''</a></h4>
+                                                                                    <p class="price">
+                                                                                        400 <span class="manat">M</span> </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('420');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('420');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('420');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=420"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="tabbestseller_default_width" style="display:none; visibility:hidden"></span>
+                                                </div>
+                                                <div id="tab-special" class="tab-content">
+                                                    <div class="box">
+                                                        <div class="box-content">
+                                                            <div class="box-product productbox-grid" id="tabspecial-grid">
+                                                                <div class="product-items">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=221">
+                    <img src="http://masalmebel.az/image/cache/catalog/Masa_stullar/masa_stul025-cr-900x900.jpg" title="Masa və stullar" alt="Masa və stullar" class="img-responsive"/></a>
+                                                                                <span class="saleicon sale">Sale</span>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <div class="percentsaving">22% off</div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=221">Masa və stullar</a></h4>
+                                                                                    <p class="price">
+                                                                                        <span class="price-new">360 <span class="manat">M</span></span> <span class="price-old">460 <span class="manat">M</span></span>
+                                                                                    </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('221');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('221');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('221');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=221"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="product-items">
+                                                                    <div class="product-block product-thumb transition">
+                                                                        <div class="product-block-inner">
+                                                                            <div class="image">
+                                                                                <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=76">
+                    <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_113-cr-900x900.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                                <span class="saleicon sale">Sale</span>
+                                                                            </div>
+                                                                            <div class="product-details">
+                                                                                <div class="caption">
+                                                                                    <div class="rating">
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                        <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                    </div>
+                                                                                    <div class="percentsaving">29% off</div>
+                                                                                    <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=76">TV bölmələri</a></h4>
+                                                                                    <p class="price">
+                                                                                        <span class="price-new">250 <span class="manat">M</span></span> <span class="price-old">350 <span class="manat">M</span></span>
+                                                                                    </p>
+                                                                                    <div class="button-group">
+                                                                                        <button type="button" class="addtocart" onclick="cart.add('76');" data-toggle="tooltip" title="Səbətə at"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                        <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('76');"><i class="fa fa-heart"></i></button>
+                                                                                        <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('76');"><i class="fa fa-exchange"></i></button>
+                                                                                        <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=76"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <span class="tabspecial_default_width" style="display:none; visibility:hidden"></span>
+                                                </div>
+                                            </div>
+                                            <script type="text/javascript">
+                                            $('#tabs a').tabs();
+                                            </script>
+                                            <div class="subbanner-cms3">
+                                                <div class="subbanner3">
+                                                    <div class="subbannercmspart1">
+                                                        <div class="subbanner-inner"><a href="#"><img src="image/catalog/sub3.jpg" alt="" class="img-responsive"></a>
+                                                            <div class="banner-content">
+                                                                <div class="banner-text1">MASAL MEBEL</div>
+                                                                <div class="banner-text2">RAHATLIQDIR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subbannercmspart2">
+                                                        <div class="subbanner-inner"><a href="#"><img src="image/catalog/sub4.jpg" alt="" class="img-responsive"></a>
+                                                            <div class="banner-content">
+                                                                <div class="banner-text1">MASAL MEBEL<br></div>
+                                                                <div class="banner-text2">EVDƏ İSTİRAHƏT YAŞADIR</div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="subbannercmspart3">
+                                                        <div class="subbanner-inner">
+                                                            <div class="inner-content">
+                                                                <div class="banner-content">
+                                                                    <div class="banner-text1">GENİŞ ÇEŞİD, RAHAT SEÇİM <span> masalmebel.az</span></div>
+                                                                    <div class="banner-text2">UCUZU BAHA ALMAYIM, KEYFİYYƏTİ UCUZ ALIN</div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="box featured">
+                                                <div class="box-head">
+                                                    <div class="box-heading">Seçilmiş məhsullar</div>
+                                                </div>
+                                                <div class="box-content">
+                                                    <div class="box-product productbox-grid" id="featured-grid">
+                                                        <div class="product-items">
+                                                            <div class="product-block product-thumb transition">
+                                                                <div class="product-block-inner">
+                                                                    <div class="image">
+                                                                        <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=68">
+        <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_050-213x278.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="product-details">
+                                                                        <div class="caption">
+                                                                            <div class="rating">
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                            </div>
+                                                                            <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=68">TV bölmələri</a></h4>
+                                                                            <p class="price">
+                                                                                0 <span class="manat">M</span> </p>
+                                                                            <div class="button-group">
+                                                                                <button type="button" class="addtocart" onclick="cart.add('68');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('68');"><i class="fa fa-heart"></i></button>
+                                                                                <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('68');"><i class="fa fa-exchange"></i></button>
+                                                                                <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=68"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-items">
+                                                            <div class="product-block product-thumb transition">
+                                                                <div class="product-block-inner">
+                                                                    <div class="image">
+                                                                        <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=69">
+        <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_051-213x278.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="product-details">
+                                                                        <div class="caption">
+                                                                            <div class="rating">
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                            </div>
+                                                                            <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=69">TV bölmələri</a></h4>
+                                                                            <p class="price">
+                                                                                0 <span class="manat">M</span> </p>
+                                                                            <div class="button-group">
+                                                                                <button type="button" class="addtocart" onclick="cart.add('69');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('69');"><i class="fa fa-heart"></i></button>
+                                                                                <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('69');"><i class="fa fa-exchange"></i></button>
+                                                                                <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=69"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-items">
+                                                            <div class="product-block product-thumb transition">
+                                                                <div class="product-block-inner">
+                                                                    <div class="image">
+                                                                        <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=70">
+        <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_052-213x278.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="product-details">
+                                                                        <div class="caption">
+                                                                            <div class="rating">
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                            </div>
+                                                                            <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=70">TV bölmələri</a></h4>
+                                                                            <p class="price">
+                                                                                0 <span class="manat">M</span> </p>
+                                                                            <div class="button-group">
+                                                                                <button type="button" class="addtocart" onclick="cart.add('70');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('70');"><i class="fa fa-heart"></i></button>
+                                                                                <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('70');"><i class="fa fa-exchange"></i></button>
+                                                                                <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=70"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="product-items">
+                                                            <div class="product-block product-thumb transition">
+                                                                <div class="product-block-inner">
+                                                                    <div class="image">
+                                                                        <a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=71">
+        <img src="http://masalmebel.az/image/cache/catalog/TV bölmələri/masalmebel_062-213x278.jpg" title="TV bölmələri" alt="TV bölmələri" class="img-responsive"/></a>
+                                                                    </div>
+                                                                    <div class="product-details">
+                                                                        <div class="caption">
+                                                                            <div class="rating">
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                                <span class="fa fa-stack"><i class="fa fa-star off fa-stack-2x"></i></span>
+                                                                            </div>
+                                                                            <h4><a href="http://masalmebel.az/index.php?route=product/product&amp;product_id=71">TV bölmələri</a></h4>
+                                                                            <p class="price">
+                                                                                0 <span class="manat">M</span> </p>
+                                                                            <div class="button-group">
+                                                                                <button type="button" class="addtocart" onclick="cart.add('71');"><i class="fa fa-shopping-cart"></i><span class="hidden-xs hidden-sm hidden-md">Səbətə at</span></button>
+                                                                                <button class="wishlist" type="button" data-toggle="tooltip" title="Arzu siyahısına əlavə et" onclick="wishlist.add('71');"><i class="fa fa-heart"></i></button>
+                                                                                <button class="compare" type="button" data-toggle="tooltip" title="Müqayisə et" onclick="compare.add('71');"><i class="fa fa-exchange"></i></button>
+                                                                                <div class="quickview-button" data-toggle="tooltip" title="Sürətli baxış"> <a class="quickbox" href="http://masalmebel.az/index.php?route=product/quick_view&amp;product_id=71"><i class="fa fa-eye" aria-hidden="true"></i></a></div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <span class="featured_default_width" style="display:none; visibility:hidden"></span>
+                                            <div id="banner2" class="single-banner">
+                                                <div class="item">
+                                                    <a href="#"><img src="http://masalmebel.az/image/cache/catalog/uzun_baner-950x122.jpg" alt="Banner orta uzun" class="img-responsive" /></a>
+                                                </div>
+                                            </div>
+                                            <script type="text/javascript">
+                                            <!--
+                                            $('.bannercarousel').owlCarousel({
+                                                items: 1,
+                                                autoPlay: 3000,
+                                                singleItem: true,
+                                                navigation: false,
+                                                pagination: true,
+                                                transitionStyle: 'fade'
+                                            });
+                                            -->
+                                            </script>
+                                            <div id="carousel-0" class="banners-slider-carousel">
+                                                <div class="customNavigation">
+                                                    <a class="prev fa"></a>
+                                                    <a class="next fa"></a>
+                                                </div>
+                                                <div class="product-carousel" id="module-0-carousel">
+                                                    <div class="slider-item">
+                                                        <div class="product-block">
+                                                            <div class="product-block-inner">
+                                                                <img src="http://masalmebel.az/image/cache/catalog/left-banner1-90x86.jpg" alt="Manufacturers" />
         </div>
-    </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="slider-item">
+                                                            <div class="product-block">
+                                                                <div class="product-block-inner">
+                                                                    <img src="http://masalmebel.az/image/cache/catalog/b5-90x86.jpg" alt="Manufacturers5" />
+        </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="slider-item">
+                                                                <div class="product-block">
+                                                                    <div class="product-block-inner">
+                                                                        <img src="http://masalmebel.az/image/cache/catalog/b4-90x86.jpg" alt="Manufacturers4" />
+        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="slider-item">
+                                                                    <div class="product-block">
+                                                                        <div class="product-block-inner">
+                                                                            <img src="http://masalmebel.az/image/cache/catalog/b3-90x86.jpg" alt="Manufacturers3" />
+        </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="slider-item">
+                                                                        <div class="product-block">
+                                                                            <div class="product-block-inner">
+                                                                                <img src="http://masalmebel.az/image/cache/catalog/b2-90x86.jpg" alt="Manufacturers2" />
+        </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="slider-item">
+                                                                            <div class="product-block">
+                                                                                <div class="product-block-inner">
+                                                                                    <img src="http://masalmebel.az/image/cache/catalog/b1-90x86.jpg" alt="Manufacturers1" />
+        </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <span class="module_default_width" style="display:none; visibility:hidden"></span>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <footer>
+                                                            <div class="content_footer_top">
+                                                                <div class="news-box container">
+                                                                    <div class="row">
+                                                                        <div class="newsletter">
+                                                                            <h5 class="news-title">Yeniliklərdən xəbərdar olun</h5>
+                                                                            <div class="newsright">
+                                                                                <div class="list-unstyled">
+                                                                                    <div>
+                                                                                        <div class="row">
+                                                                                            <form method="post">
+                                                                                                <div class="form-group required">
+                                                                                                    <label class="col-sm-2 control-label">text_email</label>
+                                                                                                    <div class="input-news">
+                                                                                                        <input type="email" name="txtemail" id="txtemail" value="" placeholder="E-mail" class="form-control input-lg" />
+                                                                                                    </div>
+                                                                                                    <div class="subscribe-btn">
+                                                                                                        <button type="submit" class="btn btn-default btn-lg" onclick="return subscribe();">Təsdiqlə</button>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </form>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
 {% endblock %}
 
+{% extends 'default/components/footer.html.twig' %}
+
 {% block stylesheets %}
-<style>
-    body { background: #F5F5F5; font: 18px/1.5 sans-serif; }
-    h1, h2 { line-height: 1.2; margin: 0 0 .5em; }
-    h1 { font-size: 36px; }
-    h2 { font-size: 21px; margin-bottom: 1em; }
-    p { margin: 0 0 1em 0; }
-    a { color: #0000F0; }
-    a:hover { text-decoration: none; }
-    code { background: #F5F5F5; max-width: 100px; padding: 2px 6px; word-wrap: break-word; }
-    #wrapper { background: #FFF; margin: 1em auto; max-width: 800px; width: 95%; }
-    #container { padding: 2em; }
-    #welcome, #status { margin-bottom: 2em; }
-    #welcome h1 span { display: block; font-size: 75%; }
-    #icon-status, #icon-book { float: left; height: 64px; margin-right: 1em; margin-top: -4px; width: 64px; }
-    #icon-book { display: none; }
 
-    @media (min-width: 768px) {
-        #wrapper { width: 80%; margin: 2em auto; }
-        #icon-book { display: inline-block; }
-        #status a, #next a { display: block; }
-
-        @-webkit-keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        @keyframes fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
-        .sf-toolbar { opacity: 0; -webkit-animation: fade-in 1s .2s forwards; animation: fade-in 1s .2s forwards;}
-    }
-</style>
 {% endblock %}

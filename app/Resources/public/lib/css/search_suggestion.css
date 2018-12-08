@@ -1,0 +1,142 @@
+.ui-autocomplete {
+    z-index: 99 !important;
+}
+.ui-menu-item {
+    text-align: left;
+    overflow: hidden;
+}
+.ui-menu-item a {
+    overflow: hidden;
+}
+.ui-autocomplete .product-list .image {
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 0;
+}
+.ui-autocomplete .product-list .image img {
+    border: 1px solid #E7E7E7;
+    padding: 0;
+}
+.ui-autocomplete .product-list .name {
+    color: #38B0E3;
+    font-weight: bold;
+    text-decoration: none;
+    height: 20px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+.ui-autocomplete .product-list .price,
+.ui-autocomplete .product-list .price-new {
+    height: 20px;
+    overflow: hidden;
+    float: none;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    text-align: left;
+    font-weight: bold;
+}
+.ui-autocomplete .product-list .price-new {
+    margin-left: 5px;
+}
+.ui-autocomplete .product-list .price-old {
+    font-weight: normal;
+    color: #999;
+    text-decoration: line-through;
+}
+.ui-autocomplete .product-list .price-old {
+    margin-right: 2px;
+}
+.ui-autocomplete .product-list .description,
+.ui-autocomplete .product-list .attributes {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    clear: both;
+}
+.ui-autocomplete .ui-state-focus div {
+    font-weight: normal;
+}
+.ui-widget-content {
+    border: 1px solid #e5e5e5;
+    background: #fff;
+    color: #707070;
+    z-index: 12345;
+}
+.ui-autocomplete li:hover .name {
+    color: #FF7A5F;
+}
+.ui-autocomplete .price-new {
+    float: left;
+    padding: 0 !important;
+}
+.ui-autocomplete .price {
+    font-weight: bold;
+    color: #1e1f22;
+}
+.ui-autocomplete .ui-state-focus .price,
+.ui-autocomplete .ui-state-hover .price {
+    color: #1e1f22;
+    font-weight: bold;
+}
+.ui-autocomplete .name,
+.ui-autocomplete .price {
+    padding: 0 !important;
+}
+.ui-autocomplete .name {
+    margin-bottom: 4px;
+}
+.ui-menu-item {
+    margin-bottom: 5px !important;
+}
+.ui-autocomplete li:last-child div {
+    padding: 0;
+}
+.ui-autocomplete li:last-child {
+    margin-bottom: 0 !important;
+}
+.ui-autocomplete .ui-menu-item,
+.ui-autocomplete .ui-menu-item div,
+.ui-autocomplete .ui-menu-item span {
+    margin: 0;
+    padding: 5px 10px;
+    border: 0;
+    text-align: left;
+    overflow: hidden;
+}
+.ui-autocomplete .ui-menu-item span {
+    margin-right: 5px;
+}
+.ui-autocomplete .ui-menu-item .label {
+    font-weight: bold;
+    color: black;
+}
+.ui-autocomplete .price-old {
+    margin-right: 2px !important;
+    color: #b5b5b5;
+    font-weight: normal;
+    font-size: 13px;
+    padding: 0 !important;
+    text-decoration: line-through;
+}
+.ui-autocomplete .price-new {
+    font-weight: bold;
+    float: left;
+    padding: 0 !imporatant;
+}
+.ui-autocomplete {
+    z-index: 99 !important;
+}
+.ui-autocomplete .name {
+    color: #707070;
+    font-weight: normal;
+    text-decoration: none;
+    height: 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+}
+.ui-autocomplete .price {
+    padding: 0px;
+}
