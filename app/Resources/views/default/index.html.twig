@@ -969,7 +969,9 @@
                                                             </div>
 {% endblock %}
 
-{% extends 'default/components/footer.html.twig' %}
+{% block footer %}
+    {% include 'default/components/footer.html.twig' %}
+{% endblock %}
 
 {% block stylesheets %}
 
