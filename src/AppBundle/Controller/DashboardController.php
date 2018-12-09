@@ -25,13 +25,18 @@ class DashboardController extends Controller
      */
     public function contact(Request $request)
     {
-        $response = new Response(
-            'contact',
-            Response::HTTP_OK,
-            array('content-type' => 'text/html')
-        );
+        // $response = new Response(
+        //     'contact',
+        //     Response::HTTP_OK,
+        //     array('content-type' => 'text/html')
+        // );
 
-        return $response;
+        // return $response;
+        $data = array(
+            'title' => "I'm Contact page"
+        );
+        return $this->render('default/pages/contact.html.twig', $data);
+
     }
 
     /**

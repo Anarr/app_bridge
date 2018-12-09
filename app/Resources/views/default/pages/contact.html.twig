@@ -1,13 +1,135 @@
-{% include 'default/components/header.html.twig' %}
+{% extends 'default/index.html.twig' %}
 
-    <div class="content-top">
-        <div class="container">
-            <div class="row">
-                {# left menu #}
-                {% include 'default/components/left_menu.html.twig' %}
+{% block body %}
+<div class="container">
+
+    <div class="row">
+        <aside id="column-left" class="col-sm-3 hidden-xs">
+            <div class="box category-left-box megnorcategory">
+                <div class="box-content">
+                    <ul id="nav-one" class="dropmenu">
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=85">Yataq
+                                otağı</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=87">Qonaq
+                                otağı</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=98">Yumşaq
+                                mebel</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=88">Mətbəx
+                                mebeli</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=99">Masa
+                                və stullar</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=97">Məktəb
+                                mebelləri</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=100">Baxça
+                                mebeli</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=101">Ofis
+                                mebeli</a>
+                        </li>
+                        <li class="top_level"><a href="http://masalmebel.az/index.php?route=product/category&amp;path=96">Digər
+                                mebellər</a>
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+            {# <div class="box">
+                <div class="box-heading">Məlumat</div>
+                <div class="list-group">
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=7">Əlaqə</a>
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=4">Haqqımızda</a>
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=6">Çatdırılma</a>
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=3">Məxfilik
+                        siyasəti</a>
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/information&amp;information_id=5">İstifadə
+                        şərtləri</a>
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/contact">Əlaqə</a>
+
+                    <a class="list-group-item" href="http://masalmebel.az/index.php?route=information/sitemap">Sayt
+                        xəritəsi</a>
+                </div>
+            </div> #}
+        </aside>
+        <div id="content" class="col-sm-9">
+            <ul class="breadcrumb">
+                <li><a href="http://masalmebel.az/index.php?route=common/home"><i class="fa fa-home"></i></a></li>
+                <li><a href="http://masalmebel.az/index.php?route=information/information&amp;information_id=7">Əlaqə</a></li>
+            </ul>
+            <h1 class="page-title">Əlaqə</h1>
+            <div class="panel panel-default information-contact">
+                <div class="panel-body">
+                    <div class="row contact-info">
+                        <div class="left">
+
+                            <div class="address-detail">
+                                <strong>&nbsp;</strong>
+                                <address>Bakı-Quba yolunun 18-ci km.<br>(Ceyranbatan qəsəbəsi)</address>
+                            </div>
+                            <div class="telephone">
+                                <strong>&nbsp;</strong>
+                                <address><a href="tel:+994123445700">(+994 12) 344-5700</a></address>
+                            </div>
+                            <div class="email">
+                                <strong><i class="fa fa-envelope-o"></i></strong>
+                                <address><a href="mailto:baki@masalmebel.az">baki@masalmebel.az</a></address>
+                            </div>
+                            <div class="openingtime">
+                                <strong>&nbsp;</strong>
+                                <address>10:00 - 18:00</address>
+                            </div>
+                            <br>
+                            <div style="clear:both;">&nbsp;</div>
+                            <br>
+                            <div class="address-detail">
+                                <strong>&nbsp;</strong>
+                                <address>Masallı şəhəri, Azərbaycan Prospektində</address>
+                            </div>
+                            <div class="telephone">
+                                <strong>&nbsp;</strong>
+                                <address><a href="tel:+994252155646">(+994 25) 215-5646</a></address>
+                            </div>
+                            <div class="email">
+                                <strong><i class="fa fa-envelope-o"></i></strong>
+                                <address><a href="mailto:masalli@masalmebel.az">masalli@masalmebel.az</a></address>
+                            </div>
+                            <div class="openingtime">
+                                <strong>&nbsp;</strong>
+                                <address>10:00 - 18:00</address>
+                            </div>
+
+                            <div style="clear:both;">&nbsp;</div>
+
+                            <div class="social-cms">
+                                <ul class="social">
+                                    <li class="facebook"><a href="https://www.facebook.com/masalmebel.az/?ref=ts&amp;fref=ts"><i
+                                                class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                    <li class="instagram"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+                        {# <div class="right">
+
+                            <div class="map">
+                                <iframe src="https://www.google.com/maps/d/embed?mid=1fFVQtq6HVByCMA3PGBp0h3nzuWQ"
+                                    width="100%" height="480"></iframe>
+                            </div>
+
+                        </div> #}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
-{# footer #}
-{% include 'default/components/footer.html.twig' %}
+</div>
+{% endblock %}

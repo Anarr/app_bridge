@@ -336,7 +336,9 @@ header {
     z-index: 99;
     margin-bottom: 20px;
     position: relative;
-    background: #f2f2f2;
+    /* background: #f2f2f2; */
+    background-color: #fff;
+    border-bottom: 1px solid #f2f2f2;
 }
 .col-sm-4.header-logo {
     width: auto;
@@ -535,7 +537,8 @@ header .dropdown.myaccount a:focus .fa {
     z-index: 999;
 }
 .header-logo img {
-    width: 100%;
+    /* width: 100%; */
+    width: 100px;
 }
 .hed-right-top {
     position: relative;
@@ -1062,7 +1065,7 @@ header #cart li {
     margin-bottom: 30px !important;
 }
 .catgory-left {
-    width: 24%;
+    /* width: 24%; */
     float: left;
     padding-right: 30px;
 }
@@ -2691,7 +2694,7 @@ h2.price {
     font-weight: 500;
     letter-spacing: 0.5px;
     margin: 0;
-    padding: 11px 0 12px;
+    padding: 3px 0 12px;
     position: relative;
     text-transform: uppercase;
     white-space: nowrap;
@@ -3533,9 +3536,13 @@ h2.price {
 }
 .main-slider {
     position: relative;
-    width: 680px;
+    width: 100%;
+    height: 450px;
     float: left;
     margin-top: 20px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
 }
 .main-slider img {}
 .main-slider .owl-carousel {}
