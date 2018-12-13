@@ -44,6 +44,37 @@ class DashboardController extends Controller
      */
     public function product(Request $request, $slug = '', $id = 0)
     {
+        $data = array(
+            'title' => "I'm Product page"
+        );
+        return $this->render('default/pages/product.html.twig', $data);
+
+        $slug = trim($slug);
+        if (!empty($slug) && empty($id)) {
+            $content = "Show category";
+        } elseif(!empty($slug) && !empty($id)) {
+            $content = "Show category product with $id id";
+        }
+        
+        $response = new Response(
+            $content,
+            Response::HTTP_OK,
+            array('content-type' => 'text/html')
+        );
+
+        return $response;
+    }
+
+    /**
+     * @Route("/products", name="products")
+     */
+    public function products(Request $request, $slug = '', $id = 0)
+    {
+        $data = array(
+            'title' => "I'm Products page"
+        );
+        return $this->render('default/pages/products.html.twig', $data);
+
         $slug = trim($slug);
         if (!empty($slug) && empty($id)) {
             $content = "Show category";
